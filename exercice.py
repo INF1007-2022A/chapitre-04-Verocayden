@@ -32,14 +32,11 @@ def get_number_of_char(string: str, char: str) -> int:
 
 
 def get_number_of_words(sentence: str, word: str) -> int:
-    count = 0
-    for letter in sentence:
-        if letter not in word:
-            pass
-        else:
-            count += 1
-    count /= len(word)
-    return int(count)
+    number_of_words = 0
+    for w in sentence.split(): # split(): separer chaque mot de la phrase.
+        if w == word:
+            number_of_words += 1
+    return number_of_words
 
 
 
